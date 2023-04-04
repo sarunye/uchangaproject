@@ -1,0 +1,25 @@
+{% extends 'website/dependencies.html' %}
+ 
+{% block content %}
+ 
+<div class="container ">
+<h1>Products</h1>
+</div>
+<div class="card-columns" style="padding: 10px; margin: 20px;">
+{% for p  in products %}
+    <div class="card" style="width: 18rem; border:5px black solid">
+        <a href="https://www.Card image cap.com">
+        <img class="card-img-top" src="{{p.image.url}}" alt="Card image cap">
+        </a>
+        <div class="card-body">
+        <h5 class="card-title">{{p.name}}</h5>
+        <p class="card-text">{{p.description}}</p>
+        $<p. class="card-text">{{p.price}}</a>
+        
+        
+        </div>
+    </div>
+ {% endfor %}
+</div>
+</div>
+{% endblock %}
